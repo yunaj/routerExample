@@ -1,3 +1,8 @@
+/* 변경한 속성들
+ * component-selector : default = true
+ * import-spacing : default = true
+ * eofline : default = true
+ */
 {
   "rulesDirectory": [
     "node_modules/codelyzer"
@@ -11,13 +16,13 @@
       "check-space"
     ],
     "curly": true,
-    "eofline": true,
+    "eofline": false,
     "forin": true,
     "import-blacklist": [
       true,
       "rxjs"
     ],
-    "import-spacing": true,
+    "import-spacing": false,
     "indent": [
       true,
       "spaces"
@@ -121,10 +126,12 @@
       "camelCase"
     ],
     "component-selector": [
+      false
+      /* 
       true,
       "element",
       "app",
-      "kebab-case"
+      "kebab-case" */
     ],
     "use-input-property-decorator": true,
     "use-output-property-decorator": true,
