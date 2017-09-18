@@ -7,7 +7,7 @@ import { AppComponent }     from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { HeroesModule }     from './heroes/heroes.module';
-import { CrisisListComponent }   from './crisis-list.component';
+import { CrisesModule } from './crisis-center/crises.module';
 import { PageNotFoundComponent } from './not-found.component';
 
 @NgModule({
@@ -16,11 +16,11 @@ import { PageNotFoundComponent } from './not-found.component';
     FormsModule,
     BrowserAnimationsModule,
     HeroesModule,
+    CrisesModule,
     AppRoutingModule
   ],
   declarations: [
     AppComponent,
-    CrisisListComponent,
     PageNotFoundComponent
   ],
   bootstrap: [ AppComponent ]
