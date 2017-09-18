@@ -17,11 +17,13 @@ const CRISES = [
 
 @Injectable()
 export class CrisisService {
-  getCrises() { return Observable.of(CRISES); }
+  static nextCrisisId = 100;
+  private crises$: BehaviorSubject<Crisis[]> = new BehaviorSubject<Crisis[]>(CRISES);
+
+  getCrises() { return this.crises$; }
 
   getCrisis(id: number | string) {
     return this.getCrises()
-      // (+) before `id` turns the string into a number
       .map(crises => crises.find(crisis => crisis.id === +id));
   }
 }

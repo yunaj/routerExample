@@ -9,7 +9,6 @@ import { Crisis, CrisisService }  from './crisis.service';
 
 @Component({
   template: `
-  <h2>HEROES</h2>
   <div *ngIf="crisis$ | async as crisis">
     <h3>"{{ crisis.name }}"</h3>
     <div>
@@ -23,6 +22,7 @@ import { Crisis, CrisisService }  from './crisis.service';
     </p>
   </div>
   `,
+  styles: ['input {width: 20em}'],
   animations: [ slideInDownAnimation ]
 })
 export class CrisisDetailComponent implements OnInit {
@@ -49,7 +49,7 @@ export class CrisisDetailComponent implements OnInit {
     // Pass along the crisis id if available
     // so that the CrisisList component can select that crisis.
     // Include a junk 'foo' property for fun.
-    this.router.navigate(['/crises', { id: crisisId, foo: 'foo' }]);
+    this.router.navigate(['../', { id: crisisId, foo: 'foo' }], { relativeTo: this.route });
   }
 }
 

@@ -1,3 +1,4 @@
+import { ComposeMessageComponent } from './compose-message.component';
 import { NgModule }       from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
@@ -7,7 +8,7 @@ import { AppComponent }     from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { HeroesModule }     from './heroes/heroes.module';
-import { CrisesModule } from './crisis-center/crises.module';
+import { CrisisCenterModule } from './crisis-center/crisis-center.module';
 import { PageNotFoundComponent } from './not-found.component';
 
 @NgModule({
@@ -16,12 +17,13 @@ import { PageNotFoundComponent } from './not-found.component';
     FormsModule,
     BrowserAnimationsModule,
     HeroesModule,
-    CrisesModule,
+    CrisisCenterModule,
     AppRoutingModule
   ],
   declarations: [
     AppComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ComposeMessageComponent
   ],
   bootstrap: [ AppComponent ]
 })
